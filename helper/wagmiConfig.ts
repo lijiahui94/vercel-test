@@ -5,8 +5,8 @@ import { okxWallet, metaMaskWallet } from "@rainbow-me/rainbowkit/wallets";
 
 const projectId = "926416b44dc72bed4897d74529b24e3f";
 
-export const chains = bscTestnet;
-// process.env.NEXT_PUBLIC_STAKE_CHAINID === "56" ? bsc : bscTestnet;
+export const chains =
+  process.env.NEXT_PUBLIC_STAKE_CHAINID === "56" ? bsc : bscTestnet;
 const connectors = connectorsForWallets(
   [
     {
