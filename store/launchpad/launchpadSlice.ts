@@ -137,7 +137,7 @@ const ProjectCardList = [
       TotalTickets: "400",
       RemainingTickets: "0",
       Progress: "100%",
-      TotalProgress: "3,333,333,333/13,333,333,333.33 $Byin",
+      TotalProgress: "13,333,333,333.33/13,333,333,333.33 $Byin",
     },
   },
   {

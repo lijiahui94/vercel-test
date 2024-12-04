@@ -239,23 +239,18 @@ const Live = () => {
         <div className="flex-1 bg-app/50 rounded-full overflow-hidden relative">
           <div
             style={{
-              width: `${
-                (cutlaunchpadItem.staked * 3333333333) / 13333333333.33
-              }%`,
+              width: `${(cutlaunchpadItem.staked * 140000) / 700000}%`,
             }}
             className="absolute top-0 left-0 h-full bg-app rounded-full"
           ></div>
         </div>
         <div className=" max-w-16 text-end">
-          {Number(
-            ((cutlaunchpadItem.staked * 3333333333) / 13333333333.33).toFixed(2)
-          )}
-          %
+          {Number(((cutlaunchpadItem.staked * 140000) / 700000).toFixed(2))}%
         </div>
       </div>
       <div className="text-xs text-center mt-2 mb-10">
-        {formatNumberWithCommas(cutlaunchpadItem.staked * 33333333.33)}
-        /700000 $AIUP
+        {formatNumberWithCommas(cutlaunchpadItem.staked * 1400)}
+        /700,000 $AIUP
       </div>
       <BuyBut />
     </div>
