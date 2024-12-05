@@ -40,7 +40,7 @@ const ProjectCardList = [
       {
         id: 4,
         src: twitterIcon.src,
-        link: "https://t.me/uptonfi_bot",
+        link: "https://x.com/upton_fi",
       },
     ],
     PublicPlacementData: {
