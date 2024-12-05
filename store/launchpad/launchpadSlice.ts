@@ -49,7 +49,7 @@ const ProjectCardList = [
       FundingDemand: "100,000",
       PerTicket: "",
       LaunchAmount: "700,000 $AIUP",
-      PerTicketValue: "1,399.99 $AIUP <br/> ≈ $200USDT",
+      PerTicketValue: "1,400 $AIUP <br/> ≈ $200USDT",
       TotalTickets: "",
       RemainingTickets: "",
       Progress: "",
