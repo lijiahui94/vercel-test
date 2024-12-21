@@ -1,0 +1,18 @@
+.ai-datas {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+
+  li {
+    &.v-line {
+      border-right: 1px solid #666;
+    }
+
+    &.h-line {
+      border-bottom: 1px solid #666;
+    }
+
+    &:last-child {
+      border-right: 0px;
+    }
+  }
+}

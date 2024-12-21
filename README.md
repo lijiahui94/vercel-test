@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Junlala
 
-## Getting Started
+## Info
 
-First, run the development server:
+- Andt vue: https://www.antdv.com/components/overview
+- Andt vue theme: https://www.antdv.com/theme-editor-cn
+- Design: https://www.figma.com/file/vLxyqzl0Ao1vDrcqx75qxA/JunLaLa-AI?type=design&node-id=0-1&mode=design&t=VwSa4mlKuHw3bEmS-0
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 参考 icon: 
+  - https://www.iconfont.cn/collections/detail?spm=a313x.search_index.0.da5a778a4.3c813a81YX3eVL&cid=1304
+  - 第二级 https://www.iconfont.cn/collections/detail?spm=a313x.search_index.0.da5a778a4.3c813a81WdHSvj&cid=38662
+  - https://storyset.com/doctor
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Message
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+message.success(content, [duration], onClose)
+message.error(content, [duration], onClose)
+message.info(content, [duration], onClose)
+message.warning(content, [duration], onClose)
+message.warn(content, [duration], onClose) // alias of warning
+message.loading(content, [duration], onClose)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## SOLANA
 
-## Learn More
+- faucet: https://faucet.solana.com
+- rpc: https://shyft.to/
+- https://solana-labs.github.io/solana-web3.js/
 
-To learn more about Next.js, take a look at the following resources:
+- Phantom
+https://r3byv.csb.app/
+https://github.com/phantom/sandbox/blob/b57fdd0e65ce4f01290141a01e33d17fd2f539b9/src/App.tsx#L242
+https://docs.phantom.app/solana/signing-a-message
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+到 gateway
 
-## Deploy on Vercel
+junlala-staging
+pnpm build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+cd data/src/nodejs/junlala && git pull && unzip -o dist.zip
+rm -rf ../dist/* && mv -f dist/* ../dist/
+https://staging.junlala.network
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+junlala
+pnpm prod
+
+cd data/src/nodejs/junlala && git pull && unzip -o dist.zip
+rm -rf ../dist/* && mv -f dist/* ../dist/
+https://junlala.network/
+
+## Note
+
+- 账号状态分3种
+  - 连了钱包，并已经获取session： store.user.isLogged && store.wallet.signedIn
+  - 链接了钱包，并已签名: store.wallet.signedIn
+  - 只链接了钱包：store.wallet.connected
